@@ -1,0 +1,27 @@
+<div class="header-main">
+<br>
+you are funny point?
+</div>
+
+<div class="main">
+あなたのお笑いの点はどこですか？
+<br>
+『笑い』は人が楽しさや嬉しさなど表現する際に生まれる感情表現。
+<br>
+みんなでお笑いを共有しよう！！！
+
+<div class="main-aa">
+😄
+投稿一覧
+😄
+</div>
+
+<%= form_with(url: search_tweets_path, local: true, method: :get, class: "search-form") do |form| %>
+  <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+  <%= form.submit "検索", class: "search-btn" %>
+<% end %>
+<div class="contents row">
+  <% @tweets.each do |tweet| %>
+    <%= render partial: "tweet", locals: { tweet: tweet } %>
+  <% end %>
+</div>

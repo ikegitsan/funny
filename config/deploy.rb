@@ -3,7 +3,7 @@
 lock "3.15.0"
 
 # Capistranoのログの表示に利用する
-set :application, 'my-app'
+set :application, 'funny'
 
 # どのリポジトリからアプリをpullするかを指定する
 set :repo_url,  'git@github.com:ikegitsan/funny.git'
